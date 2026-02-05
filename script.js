@@ -7,16 +7,22 @@ function addHoverEffect(row) {
   row.addEventListener('mouseover', colorCell);
 }
 
-function wipeHoverEffect(row) {
-  row.addEventListener('mouseout', wipeCell);
-}
-
 function colorCell(event) {
-  event.target.style.backgroundColor = '#f00';
+  event.target.setAttribute('customopacity', String(Number(event.target.getAttribute('customopacity')) + 0.1));
+  newOpacity = Number(event.target.getAttribute('customopacity'));
+  if (newOpacity > 1) {
+    newOpacity = 1;
+  }
+
+  color = randomRGB();
+  event.target.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]}, ${newOpacity})`;
 }
 
-function wipeCell(event) {
-  event.target.style.backgroundColor = '#fff';
+function randomRGB() {
+  red = Math.floor(Math.random() * 256);
+  green = Math.floor(Math.random() * 256);
+  blue = Math.floor(Math.random() * 256);
+  return [red, green, blue];
 }
 
 function drawGrid() {
@@ -29,6 +35,7 @@ function drawGrid() {
       const cell = document.createElement('div');
       row.appendChild(cell);
       cell.classList.add('cell');
+      cell.setAttribute('customopacity', 0);
     }
     addHoverEffect(row);
     sketchpad.appendChild(row);
