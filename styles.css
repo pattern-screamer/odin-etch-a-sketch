@@ -5,13 +5,12 @@ body {
 
 /* DRAWING CANVAS STYLES */
 .sketchpad {
-  height: 500px;
-  width: 500px;
+  height: 700px;
+  width: 700px;
 }
 
 .row {
   display: flex;
-  height: 6.25%;
 }
 
 .cell {
