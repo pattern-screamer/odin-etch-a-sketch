@@ -23,8 +23,8 @@ function renderSketchpad(gridWidth, gridHeight, resWidth, resHeight) {
   setResolution(resWidth, resHeight);
 }
 
-let resX = 500;
-let resY = 500;
+let resX = 700;
+let resY = 700;
 let gridX = 16;
 let gridY = 16;
 
