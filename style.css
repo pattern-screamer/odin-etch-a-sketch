@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sketchpad {
+  border: 1px solid black;
+  margin: 16px 0 0 16px;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  border: 1px solid black;
+}
