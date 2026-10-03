@@ -7,9 +7,30 @@
   <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
-  <div class="container">
-    <div id="sketchpad">
-      
+  <div class="wrapper">
+    <div class="container">
+      <div id="sketchpad">
+    
+      </div>
+    </div>
+    <div class="menus">
+      <div class="color-menu">
+        <label for="color-picker">Color Picker</label>
+        <input id="color-picker" type="color" value="#ffffff">
+      </div>
+      <div class="mouse-menu">
+        <label>Input Type</label>
+        <div>
+          <button id="hover" disabled>Hover</button>
+          <button id="click">Click</button>
+        </div>
+      </div>
+      <div>
+        <button id="grid-size">Change Grid Size</button>
+      </div>
+      <div>
+        <button id="random-mode">Toggle Random Mode</button>
+      </div>
     </div>
   </div>
   <script src="./script.js"></script>

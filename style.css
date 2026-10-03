@@ -5,6 +5,12 @@
   margin: 0;
 }
 
+.wrapper {
+  display: flex;
+  gap: 32px;
+  margin: 16px 0 0 16px;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -13,7 +19,6 @@
 
 #sketchpad {
   border: 1px solid black;
-  margin: 16px 0 0 16px;
 }
 
 .row {
@@ -22,4 +27,36 @@
 
 .cell {
   border: 1px solid black;
+}
+
+.menus,
+.color-menu,
+.mouse-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.menus {
+  gap: 16px;
+}
+
+.menus label {
+  font-size: 20px;
+}
+
+.menus button {
+  font-size: 16px;
+  padding: 2px 8px;
+}
+
+#hover:disabled,
+#click:disabled {
+  border: 4px solid green;
+  color: black;
+}
+
+.truly-disabled {
+  color: grey;
+  background-color: lightgrey;
+  border: none;
 }
